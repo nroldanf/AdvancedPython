@@ -13,5 +13,7 @@
 - Global Interpreter Lock (GIL)
 - Cython and CPython
 - Python 2.0 stuff
-- Function descriptions (string literals)
+- Docstrings and Documentation
 - Distributing a package (pypi)
+- Compile a python program as executable (Python Native)
+- Debugging Code

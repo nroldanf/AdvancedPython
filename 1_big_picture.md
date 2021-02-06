@@ -30,4 +30,11 @@ Proposing major new features primary mechanism.
 - python.exe: Rudimentary REPL (Read Eval Print Loop)
 - pip: pip install packages. 3rd party libraries. Package manager.
 - ipython: Robust interactive shell.
-- pypi: python package index
+- pypi: python package index. People publish the code so it can be used by others.
+
+
+## Ways to execute Python code
+
+- Interpreter: python.exe
+- REPL: Call out python code within interactive REPL (like ipython)
+- Natively: py2exe, pyinstaller
