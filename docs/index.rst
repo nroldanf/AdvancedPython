@@ -21,9 +21,7 @@ This is a list of elements::
 - First element
 - Second element
 
-.. toctree::
-   :maxdepth: 2
-   :caption: Contents:
+.. include:: modules.rst
 
 
 
