@@ -23,6 +23,27 @@ Some techniques for profiling:
 - dowser: For long running systems via a web browser interface.
 - memory_profiler: Help you understand why RAM usage is high.
 
+## time Unix
+
+We get 3 results:
+- __real__: real time of execution.
+- __user__: amount of time the CPU spent on your task outside kernel functions.
+- __sys__: records amount of time spent in kernel-level functions.
+
+How to use it:
+
+```shell
+/usr/bin/time -p python python_file.py
+```
+
+## cProfile
+
+How to use it:
+```shell
+python -m cProfile -s cumulative python_file.py
+```
+
+
 ## line_profiler
 To install line_profiler:
 
@@ -50,5 +71,7 @@ pip install guppy
 ## dis
 
 Inspect the underlying bytecode that is running inside the stack-based CPython virtual machine. It help to understand why some styles of code are more faster than others.
+
+More lines of bytecode will execute more slowly.
 
 dis is a built-in module.

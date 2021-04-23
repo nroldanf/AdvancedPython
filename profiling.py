@@ -27,14 +27,25 @@ def calculate_z_serial(maxiter, zs, cs):
         output[i] = n
     return output
 
+# @timefn
 def fast_function():
     return [i for i in range(1000)]
 
+# @timefn
 def slow_function():
     l = []
-    for i in range(10000):
+    for i in range(1000):
         l.append(i)
     return l
 
 if __name__ == '__main__':
     # print(calculate_z_serial(1000, [1, 2, 3], [4, 5, 6]))
+
+    # How to know if a list comprehension if better than appending for loop
+    # a = fast_function()
+    # b = slow_function()
+
+    dis.dis(fast_function)# 11 lines of bytecode
+    dis.dis(slow_function)# 18 lines of bytecode
+
+    # The fast one (Optimized C list comprehension) does not create intermediate objects
