@@ -43,13 +43,37 @@ How to use it:
 python -m cProfile -s cumulative python_file.py
 ```
 
+```python
+import cProfile
+
+def fn():
+    print("Hello world!")
+
+cProfile.run('fn()')
+```
 
 ## line_profiler
+
+Profiles in line-by-line basis.
+
 To install line_profiler:
 
 ```shell
 pip install line_profiler
 ```
+
+```python
+from line_profiler import LineProfiler
+
+def rock(rk):
+    print(rk)
+
+rk = "Hello World!"
+profile = LineProfiler(rock(rk))
+
+print(profile)
+```
+
 ## memory_profiler
 
 Memory profiler will make your code run 10x to 100x times slower. Installing psutil makes memory_profiler run faster.
