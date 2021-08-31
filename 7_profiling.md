@@ -52,6 +52,26 @@ def fn():
 cProfile.run('fn()')
 ```
 
+cProfiler decorator
+
+```python
+import cProfile, pstats, io
+
+def profile(fnc):
+    def inner(*args, **kwargs):
+        pr = cProfile.Profile()
+        pr.enable()
+        retval = fnc(*args, **kwargs)
+        pr.disable()
+        s = io.StringIO()
+        sortby = 'cumulative'
+        ps = pstats.Stats(pr, stream=s).sort_stats(sortby)
+        print(s.getvalue())
+        return retval
+    return inner
+```
+
+
 ## line_profiler
 
 Profiles in line-by-line basis.
